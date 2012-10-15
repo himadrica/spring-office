@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<!-- default-init-method, default-destroy-method -->
 <beans>
 	<bean id="triangle" class="com.dmb.java.Triangle">
 		<property name="top" ref="ptop" ></property>
@@ -20,6 +21,11 @@
 	<bean id="pright" class="com.dmb.java.Point">
 		<property name="x" value="100"></property>
 		<property name="y" value="0"></property>
+	</bean>
+	
+	<bean id="circle" class="com.dmb.java.Circle" init-method="myinit" destroy-method="mydestroy">
+		<property name="center" ref="ptop" ></property>
+		<property name="radius" value="10" ></property>
 	</bean>
 	
 </beans>	
