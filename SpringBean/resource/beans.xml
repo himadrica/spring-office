@@ -28,4 +28,6 @@
 		<property name="radius" value="10" ></property>
 	</bean>
 	
+	<bean class="com.dmb.java.DisplayNameBeanPostProcessor"></bean>
+	
 </beans>	

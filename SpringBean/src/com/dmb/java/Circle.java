@@ -22,7 +22,7 @@ public class Circle implements InitializingBean, DisposableBean{
 	
 	public Circle()
 	{
-		System.out.println("Fro circle constructor ");
+		System.out.println("From circle constructor ");
 	}
 	
 	public void draw()
