@@ -25,4 +25,6 @@
 	<bean id="circle" class="com.dmb.interfacetest.java.Circle">
 		<property name="center" ref="ptop" ></property>
 	</bean>
+	
+	<bean class="org.springframework.beans.factory.annotation.RequiredAnnotationBeanPostProcessor"></bean>
 </beans>

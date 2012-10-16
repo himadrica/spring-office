@@ -10,7 +10,7 @@ public class InterfaceApp {
 	 */
 	public static void main(String[] args) {
 		AbstractApplicationContext context = new FileSystemXmlApplicationContext("resource/interfacebean.xml");
-		Shape shape = (Shape)context.getBean("triangle");
+		Shape shape = (Shape)context.getBean("circle");
 		shape.draw();
 
 	}
