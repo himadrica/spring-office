@@ -9,8 +9,8 @@
 	</bean>
 	
 	<bean id="ptop" class="com.dmb.java.Point">
-		<property name="x" value="100"></property>
-		<property name="y" value="100"></property>
+		<property name="x" value="${point.x}"></property>
+		<property name="y" value="${point.y}"></property>
 	</bean>
 	
 	<bean id="pleft" class="com.dmb.java.Point">
@@ -29,5 +29,9 @@
 	</bean>
 	
 	<bean class="com.dmb.java.DisplayNameBeanPostProcessor"></bean>
+	<bean class="com.dmb.java.BeanFactoryPP"></bean>
 	
+	<bean class="org.springframework.beans.factory.config.PropertyPlaceholderConfigurer">
+		<property name="locations" value="resource/beaninit.properties"></property>
+	</bean>
 </beans>	
