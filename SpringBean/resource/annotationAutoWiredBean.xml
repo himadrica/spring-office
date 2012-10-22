@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+		<bean id="triangle" class="com.dmb.annotation.auto.Triangle">
+			<property name="A" ref="ptop" ></property>
+			<property name="B" ref="pleft" ></property>
+			<property name="C" ref="pright" ></property>
+		</bean>
+		<bean id="ptop" class="com.dmb.annotation.auto.Point">
+			<qualifier value="circleRelated"></qualifier>
+			<property name="x" value="99"></property>
+			<property name="y" value="88"></property>
+		</bean>
+		
+		<bean id="pleft" class="com.dmb.annotation.auto.Point">
+			<property name="x" value="0"></property>
+			<property name="y" value="100"></property>
+		</bean>
+	
+	
+	<bean id="pright" class="com.dmb.annotation.auto.Point">
+		<property name="x" value="100"></property>
+		<property name="y" value="99"></property>
+	</bean>
+	
+	<bean id="circle" class="com.dmb.annotation.auto.Circle">
+	</bean>
+	<context:annotation-config/>
+	<!--  
+		<bean class="org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor"></bean>
+	-->
+</beans>
