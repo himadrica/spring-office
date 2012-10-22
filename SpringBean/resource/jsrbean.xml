@@ -1,18 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN 2.0//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
-<beans>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd"
+	xmlns:context="http://www.springframework.org/schema/context">
+	
+	<!--  
 	<bean id="triangle" class="com.dmb.jsr.Triangle">
 		<property name="A" ref="ptop" ></property>
 		<property name="B" ref="pleft" ></property>
 		<property name="C" ref="pright" ></property>
 	</bean>
-	
+	-->
 	<bean id="ptop" class="com.dmb.jsr.Point">
 		<property name="x" value="99"></property>
 		<property name="y" value="88"></property>
 	</bean>
 	
-	<bean id="pleft" class="com.dmb.jsr.Point">
+	<bean id="center" class="com.dmb.jsr.Point">
 		<property name="x" value="0"></property>
 		<property name="y" value="100"></property>
 	</bean>
@@ -25,5 +30,5 @@
 	<bean id="circle" class="com.dmb.jsr.Circle">
 	</bean>
 	
-	<context:annotation-config />
+	<context:annotation-config/>
 </beans>

@@ -10,6 +10,7 @@ public class JSRApp {
 	 */
 	public static void main(String[] args) {
 		AbstractApplicationContext context = new FileSystemXmlApplicationContext("resource/jsrbean.xml");
+		context.registerShutdownHook();
 		Shape shape = (Shape)context.getBean("circle");
 		shape.draw();
 
